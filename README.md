@@ -1,15 +1,23 @@
-# NLP-Inference-MM
+# Hands-on-GEMM
 
-尝试实现一个适用于 NLP 序列生成任务的 GEMM。
+A GEMM tutorial by Yi Zhang/张译 at NLP Lab., Northeastern University.
 
-# To-Do
+# Performance
 
-+ 更好的 benchmark。
-    
-    当前 benchmark借鉴于 https://github.com/Cjkkkk/CUDA_gemm 。不足之处在于其无法一次性的测量多个形状的矩阵乘速度，无外部导出机制。
+![SGEMM 性能对比](https://user-images.githubusercontent.com/31173671/204142853-b1e45cb0-a8b4-42ff-a207-7eee31712305.png)
 
-+ cuda gemm的高效实现。
-    
-    尝试使用 cuda simd 以及 tensor core。
-    
-+ 更多的 To-Do
+# Usage
+
+去 `src/cuda` 文件夹下面，找到你想看性能的 gemm，记住那个名字，然后回到主项目文件夹下，首先`mkdir build`，然后输入 `make benchmark_xxx`。
+
+如你想看 `double_buffer_yhs_refine_gemm.cu` 这个矩阵乘的性能，就输入：
+
+```
+make benchmark_double_buffer_yhs_refine
+```
+
+然后二进制会出现在 `bin` 文件夹下面。
+
+# Tutorial
+
+公众号链接：[这里](https://mp.weixin.qq.com/s/rWWx0Uf4oin0kmtEjVXBqw)
